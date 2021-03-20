@@ -13,6 +13,10 @@
 		8D5E6F5D2602EF5A00D53535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D5E6F5B2602EF5A00D53535 /* Main.storyboard */; };
 		8D5E6F5F2602EF5E00D53535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D5E6F5E2602EF5E00D53535 /* Assets.xcassets */; };
 		8D5E6F622602EF5E00D53535 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D5E6F602602EF5E00D53535 /* LaunchScreen.storyboard */; };
+		8D93314C26060342002ABC27 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D93314B26060342002ABC27 /* PlayerViewController.swift */; };
+		8DE6C1CE26034BC700DAB6DA /* song2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DE6C1CB26034BC700DAB6DA /* song2.mp3 */; };
+		8DE6C1CF26034BC700DAB6DA /* song1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DE6C1CC26034BC700DAB6DA /* song1.mp3 */; };
+		8DE6C1D026034BC700DAB6DA /* song3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DE6C1CD26034BC700DAB6DA /* song3.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		8D5E6F5E2602EF5E00D53535 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D5E6F612602EF5E00D53535 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D5E6F632602EF5E00D53535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D93314B26060342002ABC27 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		8DE6C1CB26034BC700DAB6DA /* song2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = song2.mp3; path = audio/song2.mp3; sourceTree = SOURCE_ROOT; };
+		8DE6C1CC26034BC700DAB6DA /* song1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = song1.mp3; path = audio/song1.mp3; sourceTree = SOURCE_ROOT; };
+		8DE6C1CD26034BC700DAB6DA /* song3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = song3.mp3; path = audio/song3.mp3; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		8D5E6F542602EF5A00D53535 /* MyMusic */ = {
 			isa = PBXGroup;
 			children = (
+				8D5E6F692602F1DB00D53535 /* Audio */,
 				8D5E6F552602EF5A00D53535 /* AppDelegate.swift */,
 				8D5E6F572602EF5A00D53535 /* SceneDelegate.swift */,
 				8D5E6F592602EF5A00D53535 /* ViewController.swift */,
@@ -63,8 +72,19 @@
 				8D5E6F5E2602EF5E00D53535 /* Assets.xcassets */,
 				8D5E6F602602EF5E00D53535 /* LaunchScreen.storyboard */,
 				8D5E6F632602EF5E00D53535 /* Info.plist */,
+				8D93314B26060342002ABC27 /* PlayerViewController.swift */,
 			);
 			path = MyMusic;
+			sourceTree = "<group>";
+		};
+		8D5E6F692602F1DB00D53535 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				8DE6C1CC26034BC700DAB6DA /* song1.mp3 */,
+				8DE6C1CB26034BC700DAB6DA /* song2.mp3 */,
+				8DE6C1CD26034BC700DAB6DA /* song3.mp3 */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +145,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE6C1CE26034BC700DAB6DA /* song2.mp3 in Resources */,
+				8DE6C1D026034BC700DAB6DA /* song3.mp3 in Resources */,
+				8DE6C1CF26034BC700DAB6DA /* song1.mp3 in Resources */,
 				8D5E6F622602EF5E00D53535 /* LaunchScreen.storyboard in Resources */,
 				8D5E6F5F2602EF5E00D53535 /* Assets.xcassets in Resources */,
 				8D5E6F5D2602EF5A00D53535 /* Main.storyboard in Resources */,
@@ -139,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5E6F5A2602EF5A00D53535 /* ViewController.swift in Sources */,
+				8D93314C26060342002ABC27 /* PlayerViewController.swift in Sources */,
 				8D5E6F562602EF5A00D53535 /* AppDelegate.swift in Sources */,
 				8D5E6F582602EF5A00D53535 /* SceneDelegate.swift in Sources */,
 			);
@@ -286,6 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MyMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MyMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
