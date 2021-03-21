@@ -24,18 +24,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //fungsi untuk menambahkan list lagu
     func configureSongs() {
         songs.append(Song(name: "All The Time",
-                          albumName: "Visible Idea",
-                          artistNama: "The Sigit",
+                          albumName: "Visible Idea of perfection",
+                          artistName: "The S.I.G.I.T",
                           imageName: "cover1",
                           trackName: "song1"))
         songs.append(Song(name: "When The Sun Goes Down",
                           albumName: "album",
-                          artistNama: "Arctics Monkey",
+                          artistName: "Arctics Monkey",
                           imageName: "cover2",
                           trackName: "song2"))
         songs.append(Song(name: "Don't Look Back in Anger",
                           albumName: "Definetly Maybe",
-                          artistNama: "OASIS",
+                          artistName: "OASIS",
                           imageName: "cover3",
                           trackName: "song3"))
     }
@@ -56,19 +56,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.accessoryType = .disclosureIndicator
         cell.imageView?.image = UIImage(named: song.imageName)
         cell.textLabel?.font = UIFont(name: "Helvetica-Bold", size: 18)
-        cell.detailTextLabel?.font = UIFont(name: "Helvetica-Bold", size: 17)
+        cell.detailTextLabel?.font = UIFont(name: "Helvetica-Light", size: 15)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 80
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        //present the player
+        //present the player (pindah ke page music player)
         let position = indexPath.row
         guard let vc = storyboard?.instantiateViewController(identifier: "player") as? PlayerViewController
             else {
@@ -84,7 +84,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 struct Song {
       let name: String
       let albumName: String
-      let artistNama: String
+      let artistName: String
       let imageName: String
       let trackName: String
   }
